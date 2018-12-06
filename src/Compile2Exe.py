@@ -5,10 +5,12 @@ PyInstaller.__main__.run([
     '--distpath=..//',
     '--clean',
     '--onefile',
+    '--icon=..//kindle.ico'
     ])
 PyInstaller.__main__.run([
     'sendToKindle.py',
     '--distpath=..//',
     '--clean',
     '--onefile',
+    '--icon=..//kindle.ico'
     ])

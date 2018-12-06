@@ -4,6 +4,7 @@
 - [1. epub转mobi (epub2mobi.exe)](#1-epub转mobi-epub2mobiexe)
     - [1.1. 用法](#11-用法)
     - [1.2. mobi瘦身](#12-mobi瘦身)
+    - [1.2. 报错？](#12-报错)
 - [2. 推送文件到Kindle (SendToKindle.exe)](#2-推送文件到kindle-sendtokindleexe)
     - [2.1. 用法](#21-用法)
     - [2.2. 为什么要一本书发一封邮件?](#22-为什么要一本书发一封邮件)
@@ -23,6 +24,11 @@
 ## 1.2. mobi瘦身
 >本工具转换调用的是`lib`目录下amazon官方的mobi生成工具`kindlegen.exe`。
 ><br/>但因为用`kindlegen.exe`工具生成的`mobi`文件体积很大，需要瘦身。所以工具生成`mobi`后会自动调用`lib`目录下的`kindlestrip.exe`对`mobi`进行瘦身。
+
+## 1.2. 报错？
+如果转换时转换失败，提示`错误(xmlmake):E27012: 已经使用项或进程标识符: xxxxxx`。则原因在于这个epub文件制作的不标准。
+
+简单的解决办法： 用calibre把报错的epub文件转换成epub（对，就是epub转换成epub，这样处理之后epub的格式就正确了）
   
 <br/>
 <br/>
