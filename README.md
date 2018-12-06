@@ -26,10 +26,19 @@
 ><br/>但因为用`kindlegen.exe`工具生成的`mobi`文件体积很大，需要瘦身。所以工具生成`mobi`后会自动调用`lib`目录下的`kindlestrip.exe`对`mobi`进行瘦身。
 
 ## 1.2. 报错？
-如果转换时转换失败，提示`错误(xmlmake):E27012: 已经使用项或进程标识符: xxxxxx`。则原因在于这个epub文件制作的不标准。
+如果转换时转换失败，提示`错误(xmlmake):E27012: 已经使用项或进程标识符: xxxxxx`。则原因在于这个`epub`文件制作的不标准。
 
-简单的解决办法： 用calibre把报错的epub文件转换成epub（对，就是epub转换成epub，这样处理之后epub的格式就正确了）
-  
+简单的解决办法： 用`calibre`把报错的epub文件转换成`epub`（对，就是`epub`转换成`epub`，这样处理之后epub的格式就正确了）
+
+> 更加具体的原因解释：报这个错的原因在于`epub`的`content.opf`里，对一个`xhtml`页面进行了多次的引用。<br>如下面所示，此`content.opf`对`cover.xhtml`这一页面进行了多次引用，所以导致了转换时提示`cover.xhtml`已经使用。手动的解决办法就是删掉多次引用的项目。简单点的就是直接用`calibre`将`epub`转成`epub`这样相当于对格式做了一次修正。<br><br>这个错常见于一些较老的`epub`小说中，比如`轻之国度 Epup组`以前制作的`epub`
+> ``` html
+>    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" />
+ >   .........
+>    <item href="Text/cover.xhtml" id="cover.xhtml" media-type="application/xhtml+xml" />
+ 
+
+
+>   
 <br/>
 <br/>
     
