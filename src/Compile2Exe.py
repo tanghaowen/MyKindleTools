@@ -5,6 +5,10 @@ PyInstaller.__main__.run([
     '--distpath=..//',
     '--clean',
     '--onefile',
-
-
+    ])
+PyInstaller.__main__.run([
+    'sendToKindle.py',
+    '--distpath=..//',
+    '--clean',
+    '--onefile',
     ])

@@ -2,7 +2,9 @@ import smtplib,os,sys
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.utils import formataddr
-
+print("My kindle tools: Send Files To Kindle Mailbox")
+print("Created by Ueino Hakono")
+print("v1.0")
 try:
     f = open("EmailSetting.txt", "r", encoding="utf-8")
     lines = f.readlines()

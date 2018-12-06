@@ -1,7 +1,8 @@
 import os,sys
 
-print("Epub To Kindle Mobi")
-print("Created by Hakono")
+print("My kindle tools: Epub To Kindle Mobi")
+print("Created by Ueino Hakono")
+print("v1.0")
 print()
 if len(sys.argv) <2:
     print("请传入要转换的书籍目录！")
